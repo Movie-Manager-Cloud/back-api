@@ -1,9 +1,12 @@
 name: Build and deploy Python package
 
+# on:
+#   release:
+#     types: [published]
 on:
-  release:
-    types: [published]
-
+  push:
+    branches:
+      - main
 permissions:
   contents: read
   pull-requests: write
